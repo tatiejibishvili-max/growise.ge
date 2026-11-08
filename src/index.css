@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans Georgian", sans-serif;
+  --color-ink: #1d1c2b;
+  --color-muted: #5c5a70;
+  --color-line: #e4e1ee;
+  --color-accent: #4c43b8;
+  --color-accent-dark: #3c348f;
+  --color-soft: #efedfd;
+  --color-canvas: #f4f3f8;
+  --color-good: #1f6b45;
+  --color-good-soft: #e7f5ee;
+  --color-warn: #8a4b12;
+  --color-warn-soft: #fbf1e6;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: #ddd9f8;
+  }
+}
